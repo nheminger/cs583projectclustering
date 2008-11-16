@@ -2,10 +2,17 @@ package edu.gmu.cs583.project.data;
 
 import java.awt.Color;
 
+
 public class DataPoint {
 	Integer x;
 	Integer y;
 	Color centroidColor;
+	
+	public DataPoint(){
+		Integer x = -1;
+		Integer y = -1;
+		Color centroidColor = null;
+	}
 	
 	public DataPoint(Integer x, Integer y) {
 		super();
@@ -37,5 +44,13 @@ public class DataPoint {
 		this.centroidColor = centroidColor;
 	}
 	
+	public String toString(){
+		return x.toString() + ":" + y.toString();
+	}
+	
+	public void setPoints(Integer x, Integer y){
+		this.x = x;
+		this.y = y;
+	}
 	
 }

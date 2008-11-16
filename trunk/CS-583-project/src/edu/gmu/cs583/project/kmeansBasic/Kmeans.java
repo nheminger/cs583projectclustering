@@ -4,14 +4,22 @@ import edu.gmu.cs583.project.data.PointGenerator;
 import edu.gmu.cs583.project.kmeans.KMeansClusterer;
 
 public class Kmeans {
-
-	/**
-	 * @param args
-	 */
+		
+	
+	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints){
+		
+	}
+	
 	public static void main(String[] args) {
 		PointGenerator gen = new PointGenerator();
 		gen.printValues();
-		KMeansClusterer clusterer = new KMeansClusterer();
+		
 	}
+	
+	public void initCentroids(){
+		
+		
+	}
+	
 
 }

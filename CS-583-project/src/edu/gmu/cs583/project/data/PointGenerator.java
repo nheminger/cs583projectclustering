@@ -14,11 +14,11 @@ import java.util.Vector;
 
 public class PointGenerator {
 
-	Integer x_range;
-	Integer y_range;
-	Integer number_of_points;
-	Vector<DataPoint> returnDataPoints = new Vector<DataPoint>();
-	HashMap<String,DataPoint> hashedPoints = new HashMap<String,DataPoint>();
+	private Integer x_range;
+	private Integer y_range;
+	private Integer number_of_points;
+	private Vector<DataPoint> returnDataPoints = new Vector<DataPoint>();
+	private HashMap<String,DataPoint> hashedPoints = new HashMap<String,DataPoint>();
 	
 	public PointGenerator(){
 		x_range = 301;

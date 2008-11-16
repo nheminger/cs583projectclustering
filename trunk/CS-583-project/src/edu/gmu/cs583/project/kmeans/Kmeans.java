@@ -10,6 +10,7 @@ public class Kmeans {
 	public static void main(String[] args) {
 		PointGenerator gen = new PointGenerator();
 		gen.printValues();
+		KMeansClusterer clusterer = new KMeansClusterer();
 	}
 
 }

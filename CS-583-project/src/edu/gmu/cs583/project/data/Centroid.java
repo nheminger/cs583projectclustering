@@ -59,6 +59,8 @@ public class Centroid {
 		this.cluster = cluster;
 	}
 	
-	
+	public String toString(){
+		return x.toString() + ":" + y.toString();
+	}
 		
 }

@@ -1,3 +1,10 @@
+/* Authors: Chris Andrade, Nathan Heminger, Alex Prunka
+ * Class: CS583 Section 002
+ * Purpose: Final Project
+ * Title: Clustering Algorithms
+ * Description: DataPoint Class holds X and Y values for points.
+ */
+
 package edu.gmu.cs583.project.data;
 
 import java.awt.Color;

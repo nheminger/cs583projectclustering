@@ -1,6 +1,7 @@
-package edu.gmu.cs583.project.kmeans;
+package edu.gmu.cs583.project.kmeansBasic;
 
 import edu.gmu.cs583.project.data.PointGenerator;
+import edu.gmu.cs583.project.kmeans.KMeansClusterer;
 
 public class Kmeans {
 

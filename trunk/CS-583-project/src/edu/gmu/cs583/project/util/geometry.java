@@ -12,7 +12,7 @@ public class geometry {
 	
 	public Integer GetDistance(Centroid centroid, DataPoint point){
 		Integer distance = 0;
-		pow(centroid.getX() - point.getX(),2)
+		//pow(centroid.getX() - point.getX(),2)
 		
 		return distance;
 	}

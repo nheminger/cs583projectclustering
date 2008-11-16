@@ -11,8 +11,8 @@ import java.awt.Color;
 
 
 public class DataPoint {
-	Integer x;
-	Integer y;
+	private Integer x;
+	private Integer y;
 	
 	public DataPoint(){
 		Integer x = -1;

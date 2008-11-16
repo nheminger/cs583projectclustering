@@ -17,30 +17,29 @@ public class PointGenerator {
 	Integer x_range;
 	Integer y_range;
 	Integer number_of_points;
-	Vector<DataPoint> returnDataPoints;
-	HashMap<String,DataPoint> hashedPoints;
+	Vector<DataPoint> returnDataPoints = new Vector<DataPoint>();
+	HashMap<String,DataPoint> hashedPoints = new HashMap<String,DataPoint>();
 	
-	
-	
-	PointGenerator(){
-		x_range = 300;
-		y_range = 300;
+	public PointGenerator(){
+		x_range = 301;
+		y_range = 301;
 		number_of_points = 50;
 		GeneratePoints();
 	}
 	
 	
 	PointGenerator(Integer x, Integer y, Integer numberOfPoints){
-		x_range = x;
-		y_range = y;
+		x_range = x+1;
+		y_range = y+1;
 		number_of_points = numberOfPoints;
 		GeneratePoints();
 	}
 	
-	private DataPoint GeneratePoints(){
+	public DataPoint GeneratePoints(){
 		Random generator = new Random();
-		DataPoint point = new DataPoint();
+		DataPoint point = null;
 		while(hashedPoints.size() < number_of_points){
+			point = new DataPoint();
 			point.setPoints(generator.nextInt(x_range),generator.nextInt(y_range));
 			hashedPoints.put(point.toString(), point);			
 		}

@@ -13,12 +13,10 @@ import java.awt.Color;
 public class DataPoint {
 	Integer x;
 	Integer y;
-	Color centroidColor;
 	
 	public DataPoint(){
 		Integer x = -1;
 		Integer y = -1;
-		Color centroidColor = null;
 	}
 	
 	public DataPoint(Integer x, Integer y) {
@@ -41,14 +39,6 @@ public class DataPoint {
 
 	public void setY(Integer y) {
 		this.y = y;
-	}
-
-	public Color getCentroidColor() {
-		return centroidColor;
-	}
-
-	public void setCentroidColor(Color centroidColor) {
-		this.centroidColor = centroidColor;
 	}
 	
 	public String toString(){

@@ -1,13 +1,15 @@
 package edu.gmu.cs583.project.kmeans;
 
+import edu.gmu.cs583.project.data.PointGenerator;
+
 public class Kmeans {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		PointGenerator gen = new PointGenerator();
+		gen.printValues();
 	}
 
 }

@@ -20,7 +20,15 @@ public class Kmeans {
 	private PointGenerator gen;
 	
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints,Integer x,Integer y){
-		number_of_centroids = numberOfCentroids;
+		if(numberOfCentroids < 12){
+			System.out.println("Max number of centroids is 12, The number of centroids has been set to 12");
+			number_of_centroids = 12;
+		} else if (numberOfCentroids > 0){
+			number_of_centroids = numberOfCentroids;
+		} else {
+			System.out.println("Invalid number was entered for number of centroids, The number of centroids has been set to 3");
+			number_of_centroids = 3;
+		}
 		makecolors();
 		gen = new PointGenerator(numberOfDataPoints);
 		createCentroids();
@@ -41,9 +49,15 @@ public class Kmeans {
 	}
 	
 	public void initCentroids(){
-		Random generator = new Random();
+		int t = 0;
 		for(Centroid i: centroids){
-			i.setPoints(generator.nextInt(gen.getX_range()),generator.nextInt(gen.getY_range()));
+			i.setPoints(dataPoints.get(t).getX(),dataPoints.get(t).getY());
+			i.setCentroidId((t+1));
+			i.setCentroidColor(colors.get(t));
+			t++;
+			if(DEBUG){
+				System.out.println(i.toString());
+			}
 		}
 	}
 	
@@ -58,10 +72,27 @@ public class Kmeans {
 	public void initcentColors(){
 		
 	}
+	
 	public void centroidColors(){
 		
 	}
 	
+	public Vector<DataPoint> getDataPoints() {
+		return dataPoints;
+	}
+
+	public void setDataPoints(Vector<DataPoint> dataPoints) {
+		this.dataPoints = dataPoints;
+	}
+
+	public Vector<Centroid> getCentroids() {
+		return centroids;
+	}
+
+	public void setCentroids(Vector<Centroid> centroids) {
+		this.centroids = centroids;
+	}
+
 	public void makecolors(){
 		colors.add(Color.blue);
 		colors.add(Color.cyan);

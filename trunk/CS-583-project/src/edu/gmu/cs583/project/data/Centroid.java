@@ -3,6 +3,7 @@ package edu.gmu.cs583.project.data;
 import java.awt.Color;
 
 public class Centroid {
+	//Id is a number from 1 - 12
 	private Integer CentroidId;
 	private Integer x;
 	private Integer y;

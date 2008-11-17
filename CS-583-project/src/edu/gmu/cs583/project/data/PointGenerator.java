@@ -13,7 +13,6 @@ import java.util.Random;
 import java.util.Vector;
 
 public class PointGenerator {
-
 	private Integer x_range;
 	private Integer y_range;
 	private Integer number_of_points;
@@ -50,6 +49,7 @@ public class PointGenerator {
 		GeneratePoints();
 		this.DEBUG = debug;
 	}
+	
 	public DataPoint GeneratePoints(){
 		Random generator = new Random();
 		DataPoint point = null;
@@ -84,6 +84,22 @@ public class PointGenerator {
 		if(n > 0)
 		number_of_points = n;
 		GeneratePoints();
+	}
+
+	public Integer getX_range() {
+		return x_range;
+	}
+
+	public void setX_range(Integer x_range) {
+		this.x_range = x_range;
+	}
+
+	public Integer getY_range() {
+		return y_range;
+	}
+
+	public void setY_range(Integer y_range) {
+		this.y_range = y_range;
 	}
 	
 	

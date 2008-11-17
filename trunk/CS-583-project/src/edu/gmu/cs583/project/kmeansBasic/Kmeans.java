@@ -74,6 +74,7 @@ public class Kmeans {
 			}
 			minDistance = Double.MAX_VALUE;
 		}
+		//TODO: check if any of the centroids don't have new members if they don't then stop you done
 	}
 	
 	public void recomputeCentroids(){

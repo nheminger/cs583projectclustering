@@ -63,6 +63,11 @@ public class Centroid {
 		this.cluster = cluster;
 	}
 	
+	public void setPoints(Integer x, Integer y){
+		this.x = x;
+		this.y = y;
+	}
+	
 	public String toString(){
 		return x.toString() + ":" + y.toString();
 	}

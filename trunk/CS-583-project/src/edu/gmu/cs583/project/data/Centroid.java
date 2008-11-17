@@ -9,6 +9,10 @@ public class Centroid {
 	private Color centroidColor;
 	private Cluster cluster;
 	
+	public Centroid(){
+		
+	}
+	
 	public Centroid(Integer centroidId, Color centroidColor, Cluster cluster,
 			Integer x, Integer y) {
 		super();

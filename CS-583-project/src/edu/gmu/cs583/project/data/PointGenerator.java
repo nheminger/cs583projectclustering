@@ -19,11 +19,19 @@ public class PointGenerator {
 	private Integer number_of_points;
 	private Vector<DataPoint> returnDataPoints = new Vector<DataPoint>();
 	private HashMap<String,DataPoint> hashedPoints = new HashMap<String,DataPoint>();
+	private boolean DEBUG = false;
 	
 	public PointGenerator(){
 		x_range = 301;
 		y_range = 301;
 		number_of_points = 50;
+		GeneratePoints();
+	}
+	
+	public PointGenerator(Integer numberOfPoints){
+		x_range = 301;
+		y_range = 301;
+		number_of_points = numberOfPoints;
 		GeneratePoints();
 	}
 	
@@ -35,6 +43,13 @@ public class PointGenerator {
 		GeneratePoints();
 	}
 	
+	PointGenerator(Integer x, Integer y, Integer numberOfPoints, boolean debug){
+		x_range = x+1;
+		y_range = y+1;
+		number_of_points = numberOfPoints;
+		GeneratePoints();
+		this.DEBUG = debug;
+	}
 	public DataPoint GeneratePoints(){
 		Random generator = new Random();
 		DataPoint point = null;
@@ -61,6 +76,14 @@ public class PointGenerator {
 		for(String key : hashedPoints.keySet()){
 			System.out.println(hashedPoints.get(key).toString());
 		}
+	}
+	
+	public void newPoints(Integer x, Integer y,Integer n){
+		x_range = x+1;
+		y_range = y+1;
+		if(n > 0)
+		number_of_points = n;
+		GeneratePoints();
 	}
 	
 	

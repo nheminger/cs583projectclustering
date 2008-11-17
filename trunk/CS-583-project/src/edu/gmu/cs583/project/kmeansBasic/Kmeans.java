@@ -9,6 +9,7 @@ import java.util.Vector;
 import edu.gmu.cs583.project.data.Centroid;
 import edu.gmu.cs583.project.data.DataPoint;
 import edu.gmu.cs583.project.data.PointGenerator;
+import edu.gmu.cs583.project.util.geometry;
 
 public class Kmeans {
 	
@@ -17,7 +18,7 @@ public class Kmeans {
 	private boolean DEBUG = false;
 	private List<Color> colors = new ArrayList<Color>();
 	private Integer number_of_centroids;
-	private PointGenerator gen;
+	private geometry distance;
 	
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints,Integer x,Integer y){
 		if(numberOfCentroids < 12){
@@ -29,15 +30,15 @@ public class Kmeans {
 			System.out.println("Invalid number was entered for number of centroids, The number of centroids has been set to 3");
 			number_of_centroids = 3;
 		}
+		distance.setDEBUG(true);
 		makecolors();
-		gen = new PointGenerator(numberOfDataPoints);
+		PointGenerator gen = new PointGenerator(numberOfDataPoints);
+		gen.GeneratePoints();
 		createCentroids();
 	}
 	
 	public static void main(String[] args) {
-		PointGenerator gen = new PointGenerator();
-		gen.printValues();
-		
+		//TODO: run kmeans
 	}
 	
 	public void createCentroids(){
@@ -62,19 +63,20 @@ public class Kmeans {
 	}
 	
 	public void calulateMembership(){
-		
+		double temp, minDistance = Double.MAX_VALUE;
+		for(DataPoint i: dataPoints){
+			for(Centroid j: centroids){
+				if (minDistance > distance.GetDistance(j,i)){
+					i.setMembershipId(j.getCentroidId());
+					i.setCentroidMembership(j.getCentroidColor());
+				}
+			}
+			minDistance = Double.MAX_VALUE;
+		}
 	}
 	
 	public void recomputeCentroids(){
-		
-	}
-	
-	public void initcentColors(){
-		
-	}
-	
-	public void centroidColors(){
-		
+		//TODO: move centroid to middle of its cluster
 	}
 	
 	public Vector<DataPoint> getDataPoints() {

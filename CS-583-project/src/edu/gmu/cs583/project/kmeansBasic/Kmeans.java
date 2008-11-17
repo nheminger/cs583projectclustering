@@ -1,5 +1,6 @@
 package edu.gmu.cs583.project.kmeansBasic;
 
+import java.awt.Color;
 import java.util.Vector;
 
 import edu.gmu.cs583.project.data.Centroid;
@@ -10,13 +11,16 @@ public class Kmeans {
 	private Vector<DataPoint> dataPoints = new Vector<DataPoint>();
 	private Vector<Centroid> centroids = new Vector<Centroid>();
 	private boolean DEBUG = false;
+	Vector<Color> colors = new Vector<Color>();
 	
+
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints){
 		PointGenerator gen = new PointGenerator(numberOfDataPoints);
 		for(int i = 0; i < numberOfCentroids;i++){
-			//TODO: generate centroids
+			Centroid cent = new Centroid();
+			centroids.add(cent);
 		}
-		//TODO: initCentroids
+		initCentroids();
 	}
 	
 	public static void main(String[] args) {
@@ -26,7 +30,7 @@ public class Kmeans {
 	}
 	
 	public void initCentroids(){
-			
+			//TODO: get centroid colors
 	}
 	
 	public void calulateMembership(){
@@ -37,6 +41,12 @@ public class Kmeans {
 		
 	}
 	
+	public void initcentColors(){
+		
+	}
+	public void centroidColors(){
+		
+	}
 	
 	
 

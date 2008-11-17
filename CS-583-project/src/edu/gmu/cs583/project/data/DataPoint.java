@@ -13,16 +13,19 @@ import java.awt.Color;
 public class DataPoint {
 	private Integer x;
 	private Integer y;
+	private Color centroidMebership = null;
 	
 	public DataPoint(){
 		Integer x = -1;
 		Integer y = -1;
+		centroidMebership = Color.white;
 	}
 	
 	public DataPoint(Integer x, Integer y) {
 		super();
 		this.x = x;
 		this.y = y;
+		centroidMebership = Color.white;
 	}
 
 	public Integer getX() {
@@ -49,5 +52,14 @@ public class DataPoint {
 		this.x = x;
 		this.y = y;
 	}
+
+	public Color getCentroidMebership() {
+		return centroidMebership;
+	}
+
+	public void setCentroidMebership(Color centroidMebership) {
+		this.centroidMebership = centroidMebership;
+	}
+	
 	
 }

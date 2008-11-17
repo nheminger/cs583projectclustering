@@ -69,6 +69,7 @@ public class Kmeans {
 				if (minDistance > distance.GetDistance(j,i)){
 					i.setMembershipId(j.getCentroidId());
 					i.setCentroidMembership(j.getCentroidColor());
+					//TODO: j.hasNewmeber
 				}
 			}
 			minDistance = Double.MAX_VALUE;

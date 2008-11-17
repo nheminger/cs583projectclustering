@@ -9,9 +9,7 @@ public class geometry {
 
 	geometry(){	}
 	
-	geometry(boolean x){
-		DEBUG = x;
-	}
+
 	
 	public Double GetDistance(Centroid centroid, DataPoint point){
 		Double xVals = Math.pow((centroid.getX() - point.getX()),2);
@@ -20,5 +18,17 @@ public class geometry {
 		System.out.println("Centroid: "+ centroid.toString()+" point: " + point.toString() +" Distance: " + Math.sqrt(xVals+yVals));
 		return Math.sqrt(xVals+yVals);
 	}
+
+
+
+	public boolean isDEBUG() {
+		return DEBUG;
+	}
+
+	public void setDEBUG(boolean debug) {
+		DEBUG = debug;
+	}
+	
+	
 	
 }

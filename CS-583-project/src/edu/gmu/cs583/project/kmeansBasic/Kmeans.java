@@ -11,12 +11,13 @@ public class Kmeans {
 	private Vector<DataPoint> dataPoints = new Vector<DataPoint>();
 	private Vector<Centroid> centroids = new Vector<Centroid>();
 	private boolean DEBUG = false;
-	Vector<Color> colors = new Vector<Color>();
-	
+	private Vector<Color> colors = new Vector<Color>();
+	private Integer number_of_centroids;
 
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints){
+		number_of_centroids = numberOfCentroids;
 		PointGenerator gen = new PointGenerator(numberOfDataPoints);
-		for(int i = 0; i < numberOfCentroids;i++){
+		for(int i = 0; i < number_of_centroids;i++){
 			Centroid cent = new Centroid();
 			centroids.add(cent);
 		}

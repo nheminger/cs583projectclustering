@@ -9,7 +9,13 @@ public class geometry {
 
 	geometry(){	}
 	
-
+	public static void main(String[] args){
+		geometry geo = new geometry();
+		Centroid cent = new Centroid(5,20);
+		DataPoint point = new DataPoint(10,30);
+		geo.setDEBUG(true);
+		System.out.println(geo.GetDistance(cent, point));
+	}
 	
 	public Double GetDistance(Centroid centroid, DataPoint point){
 		Double xVals = Math.pow((centroid.getX() - point.getX()),2);

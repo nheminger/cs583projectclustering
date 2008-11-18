@@ -13,14 +13,17 @@ import edu.gmu.cs583.project.util.geometry;
 
 public class Kmeans {
 	
+	private Double[][] distanceTable = null;
 	private Vector<DataPoint> dataPoints = new Vector<DataPoint>();
 	private Vector<Centroid> centroids = new Vector<Centroid>();
 	private boolean DEBUG = false;
 	private List<Color> colors = new ArrayList<Color>();
 	private Integer number_of_centroids;
+	private Integer number_of_points;
 	private geometry distance;
 	
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints,Integer x,Integer y){
+		number_of_points = numberOfDataPoints;
 		if(numberOfCentroids < 12){
 			System.out.println("Max number of centroids is 12, The number of centroids has been set to 12");
 			number_of_centroids = 12;
@@ -30,6 +33,7 @@ public class Kmeans {
 			System.out.println("Invalid number was entered for number of centroids, The number of centroids has been set to 3");
 			number_of_centroids = 3;
 		}
+		distanceTable = new Double[number_of_points][number_of_centroids];
 		distance.setDEBUG(true);
 		makecolors();
 		PointGenerator gen = new PointGenerator(numberOfDataPoints);

@@ -11,12 +11,19 @@ public class Centroid {
 	private Cluster cluster;
 	
 	public Centroid(){
-		
+
+	}
+	
+	public Centroid(Integer x ,Integer y){
+		CentroidId = 1;
+		this.centroidColor = Color.black;
+		this.cluster = null;
+		this.x = x;
+		this.y = y;
 	}
 	
 	public Centroid(Integer centroidId, Color centroidColor, Cluster cluster,
 			Integer x, Integer y) {
-		super();
 		CentroidId = centroidId;
 		this.centroidColor = centroidColor;
 		this.cluster = cluster;

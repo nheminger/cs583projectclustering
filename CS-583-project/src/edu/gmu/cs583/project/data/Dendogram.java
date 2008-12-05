@@ -54,6 +54,23 @@ public class Dendogram {
 	}
 	
 	/**
+	 * Sets the cluster.
+	 * @param cluster the cluster to set.
+	 */
+	public void setCluster(Vector<DataPoint> cluster) {
+		subDendograms = new Vector<Dendogram>();
+		this.cluster = cluster;
+	}
+	
+	/**
+	 * Returns the cluster.
+	 * @return the cluster.
+	 */
+	public Vector<DataPoint> getCluster() {
+		return cluster;
+	}
+	
+	/**
 	 * Displays the Dendogram as a multi-tiered string.
 	 */
 	public String toString() {

@@ -21,11 +21,12 @@ public class geometry {
 		Double xVals = Math.pow((centroid.getX() - point.getX()),2);
 		Double yVals = Math.pow((centroid.getY() - point.getY()),2);
 		if(DEBUG)
-		System.out.println("Centroid: "+ centroid.toString()+" point: " + point.toString() +" Distance: " + Math.sqrt(xVals+yVals));
+			System.out.println("Centroid: "+ centroid.toString()+" point: " + point.toString() +" Distance: " + Math.sqrt(xVals+yVals));
+		
 		return Math.sqrt(xVals+yVals);
 	}
 
-
+	
 
 	public boolean isDEBUG() {
 		return DEBUG;

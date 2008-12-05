@@ -5,7 +5,7 @@ import java.util.Vector;
 /**
  * The Dendogram class is used to represent how the hierarchical clustering
  * method composed the clusters. A Dendogram may contain other dendograms called
- * sub-dendograms, or be composed of a single cluster of two points.
+ * sub-dendograms, or be composed of a single cluster of two points; not both.
  * 
  * @author Chris Andrade
  */
@@ -22,6 +22,37 @@ public class Dendogram {
 		cluster = new Vector<DataPoint>();
 	}
 
+	/**
+	 * Adds a sub-dendogram to the dendogram
+	 * @param subDendogram sub-dendogram to add to the dendogram.
+	 */
+	public void addSubDendogram(Dendogram subDendogram) {
+		cluster = new Vector<DataPoint>();
+		subDendograms.addElement(subDendogram);
+	}
+
+	/**
+	 * Removes the sub-dendogram at the specified index.
+	 * @param index index of the sub-dendogram to remove.
+	 */
+	public void removeSubDendogram(int index) {
+		if(!subDendograms.isEmpty())
+			subDendograms.remove(index);
+	}
+	
+	/**
+	 * Returns the sub-dendogram contained at the specified index.
+	 * @param index index of the desired sub-dendogram to obtain.
+	 * @return sub-dendogram at the specified index.
+	 */
+	public Dendogram getSubDendogram(int index) {
+		Dendogram subDendogram = null;
+		if(!subDendograms.isEmpty()) {
+			subDendogram = subDendograms.get(index);
+		}
+		return subDendogram;
+	}
+	
 	/**
 	 * Displays the Dendogram as a multi-tiered string.
 	 */

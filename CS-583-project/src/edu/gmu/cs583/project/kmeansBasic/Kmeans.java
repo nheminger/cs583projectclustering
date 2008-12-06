@@ -69,7 +69,7 @@ public class Kmeans {
 		double temp, minDistance = Double.MAX_VALUE;
 		for(DataPoint i: dataPoints){
 			for(Centroid j: centroids){
-				if (minDistance > distance.GetDistance(j,i)){
+				if (minDistance > distance.getDistance(j,i)){
 					i.setMembershipId(j.getCentroidId());
 					i.setCentroidMembership(j.getCentroidColor());
 					//TODO: j.hasNewmeber

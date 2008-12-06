@@ -78,8 +78,6 @@ public class DataPoint implements Comparable<DataPoint>{
 				result = 1;
 			}
 		}
-		
-		
 		return result;
 	}
 	

@@ -17,7 +17,7 @@ public class Centroid {
 	public Centroid(Integer x ,Integer y){
 		CentroidId = 1;
 		this.centroidColor = Color.black;
-		this.cluster = null;
+		this.cluster = new Cluster();
 		this.x = x;
 		this.y = y;
 	}

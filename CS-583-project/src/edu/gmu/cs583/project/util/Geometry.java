@@ -14,10 +14,10 @@ public class Geometry {
 		Centroid cent = new Centroid(5,20);
 		DataPoint point = new DataPoint(10,30);
 		geo.setDEBUG(true);
-		System.out.println(geo.GetDistance(cent, point));
+		System.out.println(geo.getDistance(cent, point));
 	}
 	
-	public Double GetDistance(Centroid centroid, DataPoint point){
+	public Double getDistance(Centroid centroid, DataPoint point){
 		Double xVals = Math.pow((centroid.getX() - point.getX()),2);
 		Double yVals = Math.pow((centroid.getY() - point.getY()),2);
 		if(DEBUG)

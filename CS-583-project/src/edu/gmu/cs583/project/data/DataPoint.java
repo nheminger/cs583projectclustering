@@ -10,7 +10,7 @@ package edu.gmu.cs583.project.data;
 import java.awt.Color;
 
 
-public class DataPoint {
+public class DataPoint implements Comparable<DataPoint>{
 	private Integer x;
 	private Integer y;
 	private Integer MembershipId;
@@ -68,6 +68,19 @@ public class DataPoint {
 
 	public void setCentroidMembership(Color centroidMembership) {
 		this.centroidMembership = centroidMembership;
+	}
+
+	@Override
+	public int compareTo(DataPoint o) {
+		int result = 0;
+		if(this.getX() == o.getX()){
+			if(this.getY() == o.getY()){
+				result = 1;
+			}
+		}
+		
+		
+		return result;
 	}
 	
 	

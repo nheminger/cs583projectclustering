@@ -5,11 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Vector;
-
 import edu.gmu.cs583.project.data.Centroid;
 import edu.gmu.cs583.project.data.DataPoint;
 import edu.gmu.cs583.project.data.PointGenerator;
-import edu.gmu.cs583.project.util.geometry;
+import edu.gmu.cs583.project.util.Geometry;
 
 public class Kmeans {
 	
@@ -20,7 +19,7 @@ public class Kmeans {
 	private List<Color> colors = new ArrayList<Color>();
 	private Integer number_of_centroids;
 	private Integer number_of_points;
-	private geometry distance;
+	private Geometry distance;
 	
 	Kmeans(Integer numberOfCentroids,Integer numberOfDataPoints,Integer x,Integer y){
 		number_of_points = numberOfDataPoints;
